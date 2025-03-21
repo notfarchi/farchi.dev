@@ -1,7 +1,7 @@
 import styles from "./hero.module.css"
 
 type HeroProps = {
-  pdfLoaded: boolean;
+  pdfLoaded?: boolean;
 }
 
 const Hero = ({ pdfLoaded }: HeroProps) => {
