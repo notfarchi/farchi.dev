@@ -1,6 +1,10 @@
 import styles from "./hero.module.css"
 
-const Hero = () => {
+type HeroProps = {
+  pdfLoaded: boolean;
+}
+
+const Hero = ({ pdfLoaded }: HeroProps) => {
   return (
     <section id="home" className={styles.hero}>
       <div className={styles.heroContent}>
