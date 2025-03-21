@@ -5,6 +5,7 @@ type HeroProps = {
 }
 
 const Hero = ({ pdfLoaded }: HeroProps) => {
+  // Se não for usar pdfLoaded ainda, pode ignorar abaixo
   return (
     <section id="home" className={styles.hero}>
       <div className={styles.heroContent}>
