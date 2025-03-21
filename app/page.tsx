@@ -1,4 +1,5 @@
 "use client"
+
 import { useEffect, useState } from "react"
 import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
@@ -12,10 +13,11 @@ import ParticleBackground from "@/components/particle-background"
 import ImageDebug from "@/components/image-debug"
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState("home")
-  const [pdfLoaded, setPdfLoaded] = useState(false)
-  const [showDebug, setShowDebug] = useState(false)
+  const [activeSection, setActiveSection] = useState<string>("home")
+  const [pdfLoaded, setPdfLoaded] = useState<boolean>(false)
+  const [showDebug, setShowDebug] = useState<boolean>(false)
 
+  // Atualiza a seção ativa conforme o scroll
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section")
@@ -35,7 +37,7 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // Verificar se o PDF está acessível
+  // Verifica se o PDF está acessível
   useEffect(() => {
     const checkPdfExists = async () => {
       try {
@@ -54,7 +56,7 @@ export default function Home() {
     checkPdfExists()
   }, [])
 
-  // Pré-carrega o arquivo do currículo
+  // Pré-carrega o PDF (prefetch)
   useEffect(() => {
     const preloadResume = () => {
       const link = document.createElement("link")
@@ -67,10 +69,9 @@ export default function Home() {
     preloadResume()
   }, [])
 
-  // Ativar modo de depuração com tecla especial
+  // Ativa/desativa debug com Ctrl+Shift+D
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Ctrl+Shift+D para ativar/desativar depuração
       if (e.ctrlKey && e.shiftKey && e.key === "D") {
         setShowDebug((prev) => !prev)
       }
@@ -85,7 +86,7 @@ export default function Home() {
       <ParticleBackground />
       <Navbar activeSection={activeSection} />
       <div className="content">
-        <Hero /> {/* <-- Corrigido, sem props */}
+        <Hero />
         <About pdfLoaded={pdfLoaded} />
         <Experience />
         <Skills />
@@ -93,7 +94,7 @@ export default function Home() {
         <Certificates />
         <Footer />
       </div>
-
       {showDebug && <ImageDebug />}
     </main>
   )
+}
