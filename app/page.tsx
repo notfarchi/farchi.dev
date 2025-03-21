@@ -85,7 +85,7 @@ export default function Home() {
       <ParticleBackground />
       <Navbar activeSection={activeSection} />
       <div className="content">
-        <Hero pdfLoaded={pdfLoaded} />
+        <Hero /> {/* <-- Corrigido, sem props */}
         <About pdfLoaded={pdfLoaded} />
         <Experience />
         <Skills />
@@ -97,4 +97,3 @@ export default function Home() {
       {showDebug && <ImageDebug />}
     </main>
   )
-}
