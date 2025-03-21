@@ -6,19 +6,15 @@ import { Text, Float, PerspectiveCamera } from "@react-three/drei"
 import { useMobile } from "@/hooks/use-mobile"
 import type * as THREE from "three"
 
-function Button3D({
-  position,
-  text,
-  color,
-  hoverColor,
-  onClick,
-}: {
+interface Button3DProps {
   position: [number, number, number]
   text: string
   color: string
   hoverColor: string
   onClick: () => void
-}) {
+}
+
+function Button3D({ position, text, color, hoverColor, onClick }: Button3DProps) {
   const [hovered, setHovered] = useState(false)
   const meshRef = useRef<THREE.Mesh>(null)
 
@@ -69,6 +65,18 @@ function Scene() {
     }
   }
 
+  const positions: [number, number, number][] = isMobile
+    ? [
+        [0, 1, 0],
+        [0, 0, 0],
+        [0, -1, 0],
+      ]
+    : [
+        [-1.8, 0, 0],
+        [0, 0, 0],
+        [1.8, 0, 0],
+      ]
+
   return (
     <>
       <PerspectiveCamera makeDefault position={[0, 0, 5]} />
@@ -76,21 +84,21 @@ function Scene() {
       <pointLight position={[10, 10, 10]} intensity={1} castShadow />
 
       <Button3D
-        position={[-1.8, 0, 0]}
+        position={positions[0]}
         text="Projects"
         color="#6366f1"
         hoverColor="#8b5cf6"
         onClick={() => scrollToSection("projects")}
       />
       <Button3D
-        position={[0, 0, 0]}
+        position={positions[1]}
         text="Skills"
         color="#8b5cf6"
         hoverColor="#6366f1"
         onClick={() => scrollToSection("skills")}
       />
       <Button3D
-        position={[1.8, 0, 0]}
+        position={positions[2]}
         text="Contact"
         color="#3b82f6"
         hoverColor="#8b5cf6"

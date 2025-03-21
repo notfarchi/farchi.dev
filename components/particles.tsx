@@ -1,9 +1,9 @@
 "use client"
 
 import { useCallback } from "react"
-import Particles from "react-tsparticles"
-import { loadFull } from "tsparticles"
-import type { Engine } from "tsparticles-engine"
+import Particles from "@tsparticles/react"
+import { loadFull } from "@tsparticles/engine"
+import type { Engine } from "@tsparticles/engine"
 
 export default function ParticlesBackground() {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -43,7 +43,7 @@ export default function ParticlesBackground() {
             straight: false,
           },
           number: {
-            density: { enable: true, area: 800 },
+            density: { enable: true, area: { value: 800 } }, // <-- corrigido aqui
             value: 80,
           },
           opacity: { value: 0.3 },

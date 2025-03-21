@@ -46,7 +46,7 @@ const Footer = () => {
             </div>
 
             <div className={styles.linksColumn}>
-              <h3>Connect</h3>
+              <h3>Contatos</h3>
               <ul>
                 <li>
                   <a href="https://github.com/notfarchi" target="_blank" rel="noopener noreferrer">
