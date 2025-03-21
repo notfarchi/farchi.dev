@@ -2,11 +2,10 @@
 import { useState, useEffect } from "react"
 
 export default function ImageDebug() {
-  const [imageStatus, setImageStatus] = useState("Verificando...")
-  const [imageUrl, setImageUrl] = useState("/personal-image.jpeg")
+  const [imageStatus, setImageStatus] = useState<string>("Verificando...")
+  const [imageUrl, setImageUrl] = useState<string>("/personal-image.jpeg")
 
   useEffect(() => {
-    // Verificar se a imagem está acessível
     const checkImage = async () => {
       try {
         const response = await fetch(imageUrl, { method: "HEAD" })
@@ -16,7 +15,11 @@ export default function ImageDebug() {
           setImageStatus(`Imagem não encontrada. Status: ${response.status}`)
         }
       } catch (error) {
-        setImageStatus(`Erro ao verificar imagem: ${error.message}`)
+        if (error instanceof Error) {
+          setImageStatus(`Erro ao verificar imagem: ${error.message}`)
+        } else {
+          setImageStatus(`Erro desconhecido ao verificar imagem`)
+        }
       }
     }
 
@@ -24,7 +27,6 @@ export default function ImageDebug() {
   }, [imageUrl])
 
   const tryAlternativeImage = () => {
-    // Tenta com extensão diferente
     if (imageUrl.endsWith(".jpeg")) {
       setImageUrl("/personal-image.jpg")
     } else if (imageUrl.endsWith(".jpg")) {
@@ -45,6 +47,7 @@ export default function ImageDebug() {
         borderRadius: "10px",
         zIndex: 1000,
         maxWidth: "300px",
+        color: "white",
       }}
     >
       <h3>Depuração de Imagem</h3>
@@ -72,10 +75,11 @@ export default function ImageDebug() {
           style={{ maxWidth: "100%", maxHeight: "150px", display: "block", margin: "0 auto" }}
           onError={(e) => {
             e.currentTarget.style.display = "none"
-            document.getElementById("error-msg")!.style.display = "block"
+            const msg = document.getElementById("error-msg")
+            if (msg) msg.style.display = "block"
           }}
         />
-        <p id="error-msg" style={{ display: "none", color: "red" }}>
+        <p id="error-msg" style={{ display: "none", color: "red", textAlign: "center" }}>
           Falha ao carregar imagem
         </p>
       </div>
