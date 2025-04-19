@@ -3,6 +3,15 @@ import styles from "./experience.module.css"
 const Experience = () => {
   const experiences = [
     {
+      title: "Software Freelancer",
+      company: "HeadOffice.ai",
+      location: "São Francisco, Califórnia, EUA",
+      period: "Abril, 2025 | Presente",
+      responsibilities: [
+        "Prestação de serviços sob demanda.",
+      ],
+    },
+    {
       title: "Analista de Banco de Dados",
       company: "VR Software",
       location: "Cássia, MG",
@@ -45,11 +54,11 @@ const Experience = () => {
   return (
     <section id="experience" className={styles.experience}>
       <div className="container">
-        <h2 className="section-title">Experiências & Formação</h2>
+        <h2 className="section-title">Experience & Education</h2>
 
         <div className={styles.timeline}>
           <div className={styles.timelineWork}>
-            <h3 className={styles.timelineTitle}>Experiências</h3>
+            <h3 className={styles.timelineTitle}>Work Experience</h3>
             {experiences.map((exp, index) => (
               <div key={index} className={styles.timelineItem}>
                 <div className={styles.timelineContent}>
@@ -69,7 +78,7 @@ const Experience = () => {
           </div>
 
           <div className={styles.timelineEducation}>
-            <h3 className={styles.timelineTitle}>Formação</h3>
+            <h3 className={styles.timelineTitle}>Education</h3>
             {education.map((edu, index) => (
               <div key={index} className={styles.timelineItem}>
                 <div className={styles.timelineContent}>
