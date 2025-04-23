@@ -12,7 +12,7 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  margin-top: 0px; /* Adicionado para baixar a imagem verticalmente */
+  margin-top: 0px; 
 }
 
 .image {

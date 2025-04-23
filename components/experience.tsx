@@ -54,11 +54,11 @@ const Experience = () => {
   return (
     <section id="experience" className={styles.experience}>
       <div className="container">
-        <h2 className="section-title">Experience & Education</h2>
+        <h2 className="section-title">Experiência & Educação</h2>
 
         <div className={styles.timeline}>
           <div className={styles.timelineWork}>
-            <h3 className={styles.timelineTitle}>Work Experience</h3>
+            <h3 className={styles.timelineTitle}>Experiência Profissional</h3>
             {experiences.map((exp, index) => (
               <div key={index} className={styles.timelineItem}>
                 <div className={styles.timelineContent}>
@@ -78,7 +78,7 @@ const Experience = () => {
           </div>
 
           <div className={styles.timelineEducation}>
-            <h3 className={styles.timelineTitle}>Education</h3>
+            <h3 className={styles.timelineTitle}>Educação</h3>
             {education.map((edu, index) => (
               <div key={index} className={styles.timelineItem}>
                 <div className={styles.timelineContent}>
