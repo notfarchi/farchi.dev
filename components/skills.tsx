@@ -5,7 +5,7 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Linguagens de Programação",
-      skills: ["Java", "C", "Swift", "JavaScript", "Python"],
+      skills: ["Java", "Javascript", "Python", "C"],
     },
     {
       title: "Linguagens de Marcação e Estilo",
@@ -13,7 +13,7 @@ const Skills = () => {
     },
     {
       title: "Bibliotecas e Frameworks",
-      skills: ["Spring", "RESTful API", "Swagger", "Maven", "Bootstrap"],
+      skills: ["Spring", "RESTful API", "Bootstrap"],
     },
     {
       title: "Banco de Dados",
@@ -21,7 +21,7 @@ const Skills = () => {
     },
     {
       title: "Ferramentas",
-      skills: ["Postman", "Git", "Testes Unitários", "Figma", "Node-RED"],
+      skills: ["Postman", "Git", "Testes Unitários", "Figma"],
     },
     {
       title: "Sistemas Operacionais",
@@ -29,7 +29,7 @@ const Skills = () => {
     },
     {
       title: "Metodologias Ágeis",
-      skills: ["SCRUM Framework", "Kanban"],
+      skills: ["SCRUM", "Kanban"],
     },
   ]
 

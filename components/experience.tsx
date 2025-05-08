@@ -8,7 +8,9 @@ const Experience = () => {
       location: "São Francisco, Califórnia, EUA",
       period: "Abril, 2025 | Presente",
       responsibilities: [
-        "Prestação de serviços sob demanda.",
+        "Prestando serviços sob demanda em um projeto focado no aprimoramento de Chatbot, utilizando Python, Object Tracking e APIs do Google Cloud.",
+        "Integração de IA para gerar relatórios detalhados a partir da análise visual e auditiva de vídeos.",
+        "Extração de insights valiosos para apoiar a tomada de decisões estratégicas dos clientes."
       ],
     },
     {
@@ -17,10 +19,11 @@ const Experience = () => {
       location: "Cássia, MG",
       period: "Outubro, 2024 | Presente",
       responsibilities: [
-        "Criação de querys que satisfaçam as necessidades dos clientes.",
-        "Gerenciamento e execução de tarefas de manutenção no Banco de Dados PostgreSQL, resolvendo questões de tráfego e lentidão.",
-        "Instalação e atualização da versão do Sistema VR no Servidor de Aplicativos dos clientes.",
-        "Configuração e ajuste de Redes.",
+        "Gerenciamento e manutenção de bancos de dados PostgreSQL em ambientes locais e na nuvem (O3 Cloud, Plataforma SkyOne).",
+        "Implementação de sistemas de backup e recuperação de dados, utilizando a Plataforma Datasafer.",
+        "Instalação e manutenção de aplicações Docker, ajustes em redes e configurações de servidores Windows, Ubuntu e Rocky Linux.",
+        "Atualização e manutenção do ERP, garantindo migração de dados com mínimo downtime.",
+        "Criação de queries SQL avançadas para análise de dados e suporte a decisões empresariais."
       ],
     },
     {
@@ -29,9 +32,9 @@ const Experience = () => {
       location: "Cássia, MG",
       period: "Abril, 2024 | Setembro, 2024",
       responsibilities: [
-        "Ofereço suporte técnico remotamente aos clientes, respondendo dúvidas, testando funcionalidades e abrindo chamados.",
-        "Garantir satisfação do cliente através da funcionabilidade do sistema.",
-        "Utilizo comandos SQL para encontrar determinadas funções do sistema.",
+        "Suporte técnico remoto, solucionando dúvidas e testando funcionalidades do sistema.",
+        "Abertura e acompanhamento de chamados, garantindo a disponibilidade e eficiência do sistema.",
+        "Utilização de SQL para ajustes em funções do software e otimização de processos.",
       ],
     },
   ]
