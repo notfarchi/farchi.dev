@@ -3,14 +3,14 @@ import styles from "./experience.module.css"
 const Experience = () => {
   const experiences = [
     {
-      title: "Software Freelancer",
+      title: "Desenvolvedor Freelancer",
       company: "HeadOffice.ai",
       location: "São Francisco, Califórnia, EUA",
       period: "Abril, 2025 | Presente",
       responsibilities: [
-        "Prestando serviços sob demanda em um projeto focado no aprimoramento de Chatbot, utilizando Python, Object Tracking e APIs do Google Cloud.",
-        "Integração de IA para gerar relatórios detalhados a partir da análise visual e auditiva de vídeos.",
-        "Extração de insights valiosos para apoiar a tomada de decisões estratégicas dos clientes."
+        "Desenvolvo pipelines de dados com Python para processar vídeos com análise visual e transcrição auditiva.",
+        "Implemento bibliotecas de object tracking e integro APIs, automatizando extração de dados e geração de relatórios inteligentes.",
+        "Contribuo para sistemas de IA escaláveis, focados em entregar insights acionáveis aos clientes a partir de dados multimodais (vídeo + áudio)."
       ],
     },
     {
@@ -19,11 +19,12 @@ const Experience = () => {
       location: "Cássia, MG",
       period: "Outubro, 2024 | Presente",
       responsibilities: [
-        "Gerenciamento e manutenção de bancos de dados PostgreSQL em ambientes locais e na nuvem (O3 Cloud, Plataforma SkyOne).",
-        "Implementação de sistemas de backup e recuperação de dados, utilizando a Plataforma Datasafer.",
-        "Instalação e manutenção de aplicações Docker, ajustes em redes e configurações de servidores Windows, Ubuntu e Rocky Linux.",
-        "Atualização e manutenção do ERP, garantindo migração de dados com mínimo downtime.",
-        "Criação de queries SQL avançadas para análise de dados e suporte a decisões empresariais."
+        "Gerencio bancos de dados PostgreSQL em ambientes híbridos (on-premise e cloud), assegurando alta disponibilidade e performance.",
+        "Implemento políticas de backup e recuperação, garantindo continuidade de processos críticos.",
+        "Automatizo tarefas operacionais com Shell Script e BAT, otimizando o tempo da equipe de suporte.",
+        "Conduzo atualizações de ERP com foco em mínimo downtime e estabilidade dos sistemas.",
+        "Realizo instalação e manutenção de containers Docker e servidores Linux/Windows, promovendo escalabilidade das aplicações.",
+        "Crio e ajusto queries SQL simples e avançadas para análise de dados, geração de relatórios e suporte à tomada de decisões gerenciais."
       ],
     },
     {
@@ -32,9 +33,9 @@ const Experience = () => {
       location: "Cássia, MG",
       period: "Abril, 2024 | Setembro, 2024",
       responsibilities: [
-        "Suporte técnico remoto, solucionando dúvidas e testando funcionalidades do sistema.",
-        "Abertura e acompanhamento de chamados, garantindo a disponibilidade e eficiência do sistema.",
-        "Utilização de SQL para ajustes em funções do software e otimização de processos.",
+        "Realizei atendimento remoto e diagnóstico de incidentes, garantindo operação contínua do sistema em clientes do varejo.",
+        "Executei comandos SQL para ajustes em produção, contribuindo com agilidade nas correções.",
+        "Validei correções em ambiente real, apoiando o ciclo de qualidade da equipe de desenvolvimento."
       ],
     },
   ]
